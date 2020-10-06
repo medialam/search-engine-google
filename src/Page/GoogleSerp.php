@@ -79,6 +79,8 @@ class GoogleSerp extends GoogleDom
     {
         $item = $this->cssQuery('#resultStats');
         if ($item->length != 1) {
+            $item = $this->cssQuery('#result-stats');
+        } else {
             return null;
         }
 
